@@ -1,241 +1,371 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link rel="stylesheet" as="style" onload="this.rel='stylesheet'"
-        href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B700%3B900" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+  <link rel="stylesheet" as="style" onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" />
 
-    <title>Stitch Design</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+  <title>Java Project</title>
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 </head>
 
 <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-gray-50 group/design-root overflow-x-hidden"
-        style='font-family: "Work Sans", "Noto Sans", sans-serif;'>
-        <div class="layout-container flex h-full grow flex-col">
-            <header
-                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e9eef1] px-10 py-3">
-                <div class="flex items-center gap-4 text-[#101519]">
-                    <div class="size-4">
-                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
-                        </svg>
-                    </div>
-                    <h2 class="text-[#101519] text-lg font-bold leading-tight tracking-[-0.015em]">Java Project</h2>
-                </div>
-
+  <div class="relative flex size-full min-h-screen flex-col bg-[#14191f] dark group/design-root overflow-x-hidden"
+    style='font-family: Inter, "Noto Sans", sans-serif;'>
+    <div class="layout-container flex h-full grow flex-col">
+      <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#2b3440] px-10 py-3">
+        <div class="flex items-center gap-4 text-white">
+          <div class="size-4">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+            </svg>
+          </div>
+          <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Java Project</h2>
         </div>
-        </header>
-        <div class="px-40 flex flex-1 justify-center py-5">
-            <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-                <div class="@container">
-                    <div class="@[480px]:p-4">
-                        <div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
-                            style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("img/index.png");'>
-                            <div class="flex flex-col gap-2 text-center">
-                                <h1
-                                    class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
-                                    Java Project Showcase
-                                </h1>
-                                <h2
-                                    class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
-                                    不管是露營愛好者，或是露營新手，你都有機會找到最適合自己的露營方式
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h2 class="text-[#101519] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
-                    專題介紹 Project Overview</h2>
-                <p class="text-[#101519] text-base font-normal leading-normal pb-3 pt-1 px-4">
-                <ul style="padding-left: 16px;">
-                    <li style="font-weight: bold;">專題背景</li>
-                    <p>根據中華民國露營協會統計，台灣的露營人口早已超過200萬人，越來越多人對於這項活動產生興趣並嘗試體驗。然而琳瑯滿目的露營裝備與露營場地，往往讓未曾嘗試的露營麻瓜們對於這項活動只敢遠觀，而對於擁有資深經驗的露營達人們來說，如何快速且有系統性地找到自己理想中的營地也是一大挑戰。
-                        我們透過建立整合露營資訊的平台，集結了露營商城、場地，以及各種相關知識內容，並提供線上交易及預訂服務，幫助露營愛好者省去至不同網站查找營區及設備的麻煩，讓人們在繁忙生活步調中，也能夠輕鬆找到最符合自己理想的露營方式。
-                    </p>
-                    <br>
-                    <li style="font-weight: bold;">開發動機</li>
-                    <p>在這次專題開發中，個人負責的範圍為商城中購物車、結帳，和訂單管理的部分，希望可以藉由本次專案將課程中的內容學以致用，針對這次負責的功能，除了嘗試使用Redis建立購物車，在結帳和訂單成立的環節，為了能確保金額不會被使用者自前端竄改，
-                        商城的結帳金額都自後端抓取商品資料庫中的金額資訊來去計算，在專題製作過程中，也不斷期許自己能夠以最貼近實務的方式去撰寫相關功能。
-                    </p>
-                    <br>
-                    <li style="font-weight: bold;">技術使用</li>
-                    <p>此專案以Spring Boot實作RESTful API，將業務邏輯與資料存取分層管理，前端使用fetch發送HTTP請求串接API，實現前後端分離，後續會針對個人負責部分更詳細說明。
-                    </p>
+        <div class="flex flex-1 justify-end gap-8">
 
-                </ul>
+          <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+            style='background-image: url("img/me.jpg");'>
+          </div>
+        </div>
+      </header>
+      <div class="px-40 flex flex-1 justify-center py-5">
+        <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+          <div class="@container">
+            <div class="@[480px]:p-4">
+              <div
+                class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
+                style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPaZABo7Plgahu-LP51pz5CuFgWmEvCJC3WnUItuq7jQcwkWJbZyoP8MYJSEzrrzDBftvuPcyJaYmNUTY1N-IT45hLMJaG13tOOEM5meIByJlFkfyfyE3hZy2Qy0TBIdb86pIeSux2iM82geqfxx2bAn3p-OXLR-iWdeIn3M8FO1yXukQQaH6Kqwtc_-xFvTfnr_tDbuK74u59IAV-l2ovhIHyaFIlE7hVTd7sQHML2gof5Hq9uF0URFttvJWDvBHsatSX7oghlF54");'>
+                <div class="flex flex-col gap-2 text-center">
+                  <h1
+                    class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                    Java Project Showcase
+                  </h1>
+                  <h2
+                    class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                    不管是露營愛好者，或是露營新手，你都有機會找到最適合自己的露營方式
+                  </h2>
+                </div>
+              </div>
+              <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">專題介紹 Project
+                Overview
+              </h2>
+              <p class="text-white] text-base font-normal leading-normal pb-3 pt-1 px-4">
+              <ul style="padding-left: 16px; color: rgb(157, 171, 190);">
+                <li style="font-weight: bold;">專題背景</li>
+                <p>
+                  根據中華民國露營協會統計，台灣的露營人口早已超過200萬人，越來越多人對於這項活動產生興趣並嘗試體驗。然而琳瑯滿目的露營裝備與露營場地，往往讓未曾嘗試的露營麻瓜們對於這項活動只敢遠觀，而對於擁有資深經驗的露營達人們來說，如何快速且有系統性地找到自己理想中的營地也是一大挑戰。
+                  我們透過建立整合露營資訊的平台，集結了露營商城、場地，以及各種相關知識內容，並提供線上交易及預訂服務，幫助露營愛好者省去至不同網站查找營區及設備的麻煩，讓人們在繁忙生活步調中，也能夠輕鬆找到最符合自己理想的露營方式。
                 </p>
                 <br>
-                <h2 class="text-[#101519] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
-                    功能說明 Key Features</h2>
-                <p class="text-[#101519] text-base font-normal leading-normal pb-3 pt-1 px-4">
-                <h2 class="text-[#101519] text-base font-bold leading-tight"
-                    style="padding-left: 16px;  padding-bottom: 10px;">加入購物車</h2>
-                <ul style="padding-left: 16px;">
+                <li style="font-weight: bold;">開發動機</li>
+                <p>
+                  在這次專題開發中，個人負責的範圍為商城中購物車、結帳，和訂單管理的部分，希望可以藉由本次專案將課程中的內容學以致用，針對這次負責的功能，除了嘗試使用Redis建立購物車，在結帳和訂單成立的環節，為了能確保金額不會被使用者自前端竄改，
+                  商城的結帳金額都自後端抓取商品資料庫中的金額資訊來去計算，在專題製作過程中，也不斷期許自己能夠以最貼近實務的方式去撰寫相關功能。
+                </p>
+                <br>
+                <li style="font-weight: bold;">技術使用</li>
+                <p>此專案以Spring Boot實作RESTful API，將業務邏輯與資料存取分層管理，前端使用fetch發送HTTP請求串接API，實現前後端分離，後續會針對個人負責部分更詳細說明。
+                </p>
+
+              </ul>
+              </p>
+              <br>
+
+              <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">功能說明 Key
+                Features
+              </h2>
+              <div class="flex items-center gap-4 bg-[#14191f] px-4 py-3">
+                <div class="flex flex-col justify-center">
+                  <h2 class="text-[#9dabbe] text-base font-bold leading-tight line-clamp-1">加入購物車</h2>
+                  <ul style=" color: #9dabbe; margin-top: 10px;">
                     <li style=" padding-bottom: 10px;">不管登入與否皆可將商品加入購物車</li>
                     <li style=" padding-bottom: 10px;">可透過商城首頁中展示的商品品項，選擇顏色及規格後點選加入購物車</li>
                     <li style=" padding-bottom: 10px;">進入商品頁面後，也可在選擇顏色、規格、數量後點選加入購物車</li>
-                </ul>
-                <br>
-                <h2 class="text-[#101519] text-base font-bold leading-tight"
-                    style="padding-left: 16px; padding-bottom: 10px;">編輯購物車內容</h2>
-                <ul style="padding-left: 16px;">
+                  </ul>
+                </div>
+              </div>
+
+              <div class="flex w-full grow bg-[#14191f] @container p-4" style="height: 300px;">
+                <div class="w-full gap-1 overflow-hidden bg-[#14191f] @[480px]:gap-2 aspect-[3/2]  flex">
+                  <div class="w-full bg-center bg-no-repeat bg-contain aspect-auto rounded-none flex"
+                    style='background-image: url("img/add_cart1.png");'>
+                  </div>
+                  <div class="w-full bg-center bg-no-repeat bg-contain aspect-auto rounded-none flex"
+                    style='background-image: url("img/add_cart2.png");'>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4 bg-[#14191f] px-4 py-3">
+                <div class="flex flex-col justify-center">
+                  <h2 class="text-[#9dabbe] text-base font-bold leading-tight line-clamp-1">編輯購物車內容</h2>
+                  <ul style=" color: #9dabbe; margin-top: 10px;">
                     <li style=" padding-bottom: 10px;">針對顏色、規格、數量於購物車中進行編輯</li>
                     <li style=" padding-bottom: 10px;">針對單筆商品從購物車中移除</li>
                     <li style=" padding-bottom: 10px;">將商品購物車中所有商品清空</li>
-                </ul>
-                <br>
-                <h2 class="text-[#101519] text-base font-bold leading-tight"
-                    style="padding-left: 16px; padding-bottom: 10px;">合併購物車</h2>
-                <ul style="padding-left: 16px;">
+                  </ul>
+                </div>
+              </div>
+
+              <div class="flex w-full grow bg-[#14191f] @container p-4" style="height: 150px;">
+                <div class="w-full gap-1 overflow-hidden bg-[#14191f] @[480px]:gap-2 aspect-[3/2]  flex">
+                  <div class="w-full bg-center bg-no-repeat bg-contain aspect-auto rounded-none flex"
+                    style='background-image: url("img/update_cart.png");'>
+                  </div>
+                </div>
+              </div>
+              <div class="flex w-full grow bg-[#14191f] @container p-4" style="height: 300px;">
+                <div class="w-full gap-1 overflow-hidden bg-[#14191f] @[480px]:gap-2 aspect-[3/2]  flex">
+                  <div class="w-full bg-center bg-no-repeat bg-contain aspect-auto rounded-none flex"
+                    style='background-image: url("img/update_cart2.png");'>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4 bg-[#14191f] px-4 py-3">
+                <div class="flex flex-col justify-center">
+                  <h2 class="text-[#9dabbe] text-base font-bold leading-tight line-clamp-1">合併購物車</h2>
+                  <ul style=" color: #9dabbe; margin-top: 10px;">
                     <li style=" padding-bottom: 10px;">在結帳前會先進行登入驗證，登入驗證完成後可將先前存放購物車內容與未登入情況下存放購物車內容合併</li>
-                </ul>
-                <br>
+                  </ul>
+                </div>
+              </div>
 
-                <h2 class="text-[#101519] text-base font-bold leading-tight"
-                    style="padding-left: 16px; padding-bottom: 10px;">結帳</h2>
-                <ul style="padding-left: 16px;">
+              <div class="flex items-center gap-4 bg-[#14191f] px-4 py-3">
+                <div class="flex flex-col justify-center">
+                  <h2 class="text-[#9dabbe] text-base font-bold leading-tight line-clamp-1">結帳</h2>
+                  <ul style=" color: #9dabbe; margin-top: 10px;">
                     <li style=" padding-bottom: 10px;">填寫結帳基本資訊，包含結帳方式、出貨方式、收件人資訊</li>
                     <li style=" padding-bottom: 10px;">可透過linepay進行付款</li>
                     <li style=" padding-bottom: 10px;">設置出貨方式和付款方式的綁定限制，若選超商付款僅能使用超商取貨，反之亦然</li>
                     <li style=" padding-bottom: 10px;">收件人資訊可一鍵帶入會員資訊</li>
-                </ul>
-                <br>
+                  </ul>
+                </div>
+              </div>
 
-                <h2 class="text-[#101519] text-base font-bold leading-tight"
-                    style="padding-left: 16px; padding-bottom: 10px;">使用折價券</h2>
-                <ul style="padding-left: 16px;">
-                    <li style=" padding-bottom: 10px;">填寫結帳基本資訊，包含結帳方式、出貨方式、收件人資訊</li>
-                    <li style=" padding-bottom: 10px;">可透過linepay進行付款</li>
-                    <li style=" padding-bottom: 10px;">設置出貨方式和付款方式的綁定限制，若選超商付款僅能使用超商取貨，反之亦然</li>
-                    <li style=" padding-bottom: 10px;">收件人資訊可一鍵帶入會員資訊</li>
-                </ul>
+              <div class="flex items-center gap-4 bg-[#14191f] px-4 py-3">
+                <div class="flex flex-col justify-center">
+                  <h2 class="text-[#9dabbe] text-base font-bold leading-tight line-clamp-1">使用折價券</h2>
+                  <ul style=" color: #9dabbe; margin-top: 10px;">
+                    <li style=" padding-bottom: 10px;">結帳時提供未使用過且在使用期間之折價券供會員使用</li>
+                    <li style=" padding-bottom: 10px;">依據折價券設定最低使用金額限制結帳時可否使用</li>
+                    <li style=" padding-bottom: 10px;">若使用折價券，則會依據折價券設定的折扣金額或折扣比例進行折扣計算</li>
+                  </ul>
+                </div>
+              </div>
 
-                <h2 class="text-[#101519] text-base font-bold leading-tight"
-                    style="padding-left: 16px; padding-bottom: 10px;">申請取消、申請退貨、新增/編輯評論</h2>
-                <ul style="padding-left: 16px;">
+              <div class="flex w-full grow bg-[#14191f] @container p-4" style="height: 300px;">
+                <div class="w-full gap-1 overflow-hidden bg-[#14191f] @[480px]:gap-2 aspect-[3/2]  flex">
+                  <div class="w-full bg-center bg-no-repeat bg-contain aspect-auto rounded-none flex"
+                    style='background-image: url("img/checkout2.png");'>
+                  </div>
+                  <div class="w-full bg-center bg-no-repeat bg-contain aspect-auto rounded-none flex"
+                    style='background-image: url("img/checkout3.png");'>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4 bg-[#14191f] px-4 py-3">
+                <div class="flex flex-col justify-center">
+                  <h2 class="text-[#9dabbe] text-base font-bold leading-tight line-clamp-1">申請取消、申請退貨、新增/編輯評論</h2>
+                  <ul style="margin-top: 10px; color: #9dabbe; margin-top: 10px;">
                     <li style=" padding-bottom: 10px;">可依據訂單狀態不同去做申請取消或退貨的操作</li>
                     <table border="1" cellpadding="6" cellspacing="0"
-                        style="border-collapse:collapse; width:100%; text-align:left;">
-                        <thead>
-                            <tr>
-                                <th>功能</th>
-                                <th>條件限制</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+                      style="border-collapse:collapse; width:100%; text-align:left;">
+                      <thead>
+                        <tr>
+                          <th>功能</th>
+                          <th>條件限制</th>
+                        </tr>
+                      </thead>
+                      <tbody>
 
-                            <tr>
-                                <td>申請退貨</td>
-                                <td>
-                                    1. 訂單狀態必須為3（已取貨）且 退貨申請狀態需為0（未申請退貨）
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>取消訂單</td>
-                                <td>
-                                    1. 訂單狀態為0（未出貨）或1（待出貨）<br>
-                                    2. 只能在未出貨前申請取消
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>新增/編輯評論</td>
-                                <td>
-                                    1. 訂單狀態為3（已取貨）且 退貨申請狀態需為0（未申請退貨）<br>
-                                </td>
-                            </tr>
+                        <tr>
+                          <td>申請退貨</td>
+                          <td>
+                            1. 訂單狀態必須為3（已取貨）且 退貨申請狀態需為0（未申請退貨）
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>取消訂單</td>
+                          <td>
+                            1. 訂單狀態為0（未出貨）或1（待出貨）<br>
+                            2. 只能在未出貨前申請取消
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>新增/編輯評論</td>
+                          <td>
+                            1. 訂單狀態為3（已取貨）且 退貨申請狀態需為0（未申請退貨）<br>
+                          </td>
+                        </tr>
 
-                        </tbody>
+                      </tbody>
                     </table>
 
 
-                </ul>
-                <br>
-                <h2 class="text-[#101519] text-base font-bold leading-tight"
-                    style="padding-left: 16px; padding-bottom: 10px;">後台管理＿編輯訂單</h2>
-                <ul style="padding-left: 16px;">
+                  </ul>
+                </div>
+              </div>
+
+              <div class="flex w-full grow bg-[#14191f] @container p-4" style="height: 200px;">
+                <div class="w-full gap-1 overflow-hidden bg-[#14191f] @[480px]:gap-2 aspect-[3/2]  flex">
+                  <div class="w-full bg-center bg-no-repeat bg-contain aspect-auto rounded-none flex"
+                    style='background-image: url("img/cancel.png");'>
+                  </div>
+                  <div class="w-full bg-center bg-no-repeat bg-contain aspect-auto rounded-none flex"
+                    style='background-image: url("img/comment.png");'>
+                  </div>
+                </div>
+              </div>
+              <div class="flex w-full grow bg-[#14191f] @container p-4" style="height: 200px;">
+                <div class="w-full gap-1 overflow-hidden bg-[#14191f] @[480px]:gap-2 aspect-[3/2]  flex">
+                  <div class="w-full bg-center bg-no-repeat bg-contain aspect-auto rounded-none flex"
+                    style='background-image: url("img/return.png");'>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4 bg-[#14191f] px-4 py-3">
+                <div class="flex flex-col justify-center">
+                  <h2 class="text-[#9dabbe] text-base font-bold leading-tight line-clamp-1">後台管理＿編輯訂單</h2>
+                  <ul style="color: #9dabbe; margin-top: 10px;">
                     <li style=" padding-bottom: 10px;">可根據訂單狀態提供後台管理員不同編輯權限</li>
                     <table border="1" cellpadding="6" cellspacing="0"
-                        style="border-collapse:collapse; width:100%; text-align:left;">
-                        <thead>
-                            <tr>
-                                <th>編輯項目</th>
-                                <th>條件限制（邏輯說明）</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>收件人基本資料</td>
-                                <td>只在訂單狀態為待賣家確認時可編輯，如已進入出貨流程將無法更改</td>
-                            </tr>
-                            <tr>
-                                <td>出貨日期</td>
-                                <td>已取貨完成或已取消禁止編輯</td>
-                            </tr>
-                            <tr>
-                                <td>折價券</td>
-                                <td>在訂單還在待賣家確認狀態可隨時新增、修改，系統會即時計算金額，但訂單進入出貨環節時將無法操作</td>
-                            </tr>
-                            <tr>
-                                <td>退貨處理</td>
-                                <td>僅限訂單狀態為已取貨完成且退貨申請狀態為申請退貨時管理員可針對退貨成功與否進行狀態更新</td>
-                            </tr>
-                        </tbody>
+                      style="border-collapse:collapse; width:100%; text-align:left;">
+                      <thead>
+                        <tr>
+                          <th>編輯項目</th>
+                          <th>條件限制</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>收件人基本資料</td>
+                          <td>只在訂單狀態為待賣家確認時可編輯，如已進入出貨流程將無法更改</td>
+                        </tr>
+                        <tr>
+                          <td>出貨日期</td>
+                          <td>已取貨完成或已取消禁止編輯</td>
+                        </tr>
+                        <tr>
+                          <td>折價券</td>
+                          <td>在訂單還在待賣家確認狀態可隨時新增、修改，系統會即時計算金額，但訂單進入出貨環節時將無法操作</td>
+                        </tr>
+                        <tr>
+                          <td>退貨處理</td>
+                          <td>僅限訂單狀態為已取貨完成且退貨申請狀態為申請退貨時管理員可針對退貨成功與否進行狀態更新</td>
+                        </tr>
+                      </tbody>
                     </table>
-                </ul>
-                </p>
+                  </ul>
+                </div>
+              </div>
 
+              <div class="flex w-full grow bg-[#14191f] @container p-4" style="height: 200px;">
+                <div class="w-full gap-1 overflow-hidden bg-[#14191f] @[480px]:gap-2 aspect-[3/2]  flex">
+                  <div class="w-full bg-center bg-no-repeat bg-contain aspect-auto rounded-none flex"
+                    style='background-image: url("img/management.png");'>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+                Implementation
+                Details</h2>
+              <div class="flex items-center gap-4 bg-[#14191f] px-4 min-h-14">
+                <div class="text-white flex items-center justify-center rounded-lg bg-[#2b3440] shrink-0 size-10"
+                  data-icon="Stack" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <path
+                      d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z">
+                    </path>
+                  </svg>
+                </div>
+                <p class="text-white text-base font-normal leading-normal flex-1 truncate">Layered architecture
+                  separating
+                  UI, business logic, and data access.</p>
+              </div>
+              <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label class="flex flex-col min-w-40 flex-1">
+                  <textarea
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#3d4a5c] bg-[#1f252e] focus:border-[#3d4a5c] min-h-36 placeholder:text-[#9dabbe] p-[15px] text-base font-normal leading-normal"></textarea>
+                </label>
+              </div>
+              <div class="flex items-center gap-4 bg-[#14191f] px-4 min-h-14">
+                <div class="text-white flex items-center justify-center rounded-lg bg-[#2b3440] shrink-0 size-10"
+                  data-icon="PuzzlePiece" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <path
+                      d="M220.27,158.54a8,8,0,0,0-7.7-.46,20,20,0,1,1,0-36.16A8,8,0,0,0,224,114.69V72a16,16,0,0,0-16-16H171.78a35.36,35.36,0,0,0,.22-4,36.11,36.11,0,0,0-11.36-26.24,36,36,0,0,0-60.55,23.62,36.56,36.56,0,0,0,.14,6.62H64A16,16,0,0,0,48,72v32.22a35.36,35.36,0,0,0-4-.22,36.12,36.12,0,0,0-26.24,11.36,35.7,35.7,0,0,0-9.69,27,36.08,36.08,0,0,0,33.31,33.6,35.68,35.68,0,0,0,6.62-.14V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V165.31A8,8,0,0,0,220.27,158.54ZM208,208H64V165.31a8,8,0,0,0-11.43-7.23,20,20,0,1,1,0-36.16A8,8,0,0,0,64,114.69V72h46.69a8,8,0,0,0,7.23-11.43,20,20,0,1,1,36.16,0A8,8,0,0,0,161.31,72H208v32.23a35.68,35.68,0,0,0-6.62-.14A36,36,0,0,0,204,176a35.36,35.36,0,0,0,4-.22Z">
+                    </path>
+                  </svg>
+                </div>
+                <p class="text-white text-base font-normal leading-normal flex-1 truncate">Key design patterns employed
+                  for
+                  code quality and maintainability.</p>
+              </div>
+              <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label class="flex flex-col min-w-40 flex-1">
+                  <textarea
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#3d4a5c] bg-[#1f252e] focus:border-[#3d4a5c] min-h-36 placeholder:text-[#9dabbe] p-[15px] text-base font-normal leading-normal"></textarea>
+                </label>
+              </div>
+              <div class="flex items-center gap-4 bg-[#14191f] px-4 min-h-14">
+                <div class="text-white flex items-center justify-center rounded-lg bg-[#2b3440] shrink-0 size-10"
+                  data-icon="TestTube" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <path
+                      d="M237.66,86.34l-60-60a8,8,0,0,0-11.32,0L37.11,155.57a44.77,44.77,0,0,0,63.32,63.32L212.32,107l22.21-7.4a8,8,0,0,0,3.13-13.25ZM89.11,207.57a28.77,28.77,0,0,1-40.68-40.68l28.8-28.8c8.47-2.9,21.75-4,39.07,5,10.6,5.54,20.18,8,28.56,8.73ZM205.47,92.41a8,8,0,0,0-3.13,1.93l-39.57,39.57c-8.47,2.9-21.75,4-39.07-5-10.6-5.54-20.18-8-28.56-8.73L172,43.31,217.19,88.5Z">
+                    </path>
+                  </svg>
+                </div>
+                <p class="text-white text-base font-normal leading-normal flex-1 truncate">Comprehensive unit and
+                  integration tests included.</p>
+              </div>
+              <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label class="flex flex-col min-w-40 flex-1">
+                  <textarea
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#3d4a5c] bg-[#1f252e] focus:border-[#3d4a5c] min-h-36 placeholder:text-[#9dabbe] p-[15px] text-base font-normal leading-normal"></textarea>
+                </label>
+              </div> -->
+              <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">心得與收穫
+                Reflection
+              </h2>
+              <p class="text-[#101519] text-base font-normal leading-normal pb-3 pt-1 px-4">
+                在短短五個月中，從第一次 print 出 Hello
+                World，到與組員合作完成專題開發，這段過程讓我深刻體會到自己在程式語言基礎知識與團隊合作方面，還有許多需要學習與成長的空間。雖然經過這次專題，我對相關內容有了更深入的了解，但也發現未來仍有許多可以改進的地方，期許期許自己能在之後的學習中持續精進，並將所學應用於實際專案開發中。
                 <br>
-
-                <h2 class="text-[#101519] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
-                    Implementation Details</h2>
-                <p class="text-[#101519] text-base font-normal leading-normal pb-3 pt-1 px-4">
-                    The project follows a layered architecture, separating concerns between the user interface,
-                    business logic, and data access layers. Key design patterns, such as
-                    [mention specific patterns used], are employed to ensure code quality and maintainability. The
-                    implementation also includes comprehensive unit and integration tests.
-                </p>
-                <h2 class="text-[#101519] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
-                    Demo</h2>
-                <div class="p-4">
-                    <div class="relative flex items-center justify-center bg-[#d7e7f3] bg-cover bg-center aspect-video rounded-xl p-4"
-                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHZgyMS0RZnxZLjUApZ-x4vatOS-OFHM5roweETJKj9m43PBwAR30Pkam6jfQ4i2P77j51tU44lOAp9K0WqPKxqOkFWFRu_4Cmgige1c5SBTKpNvvEa89KgRL0b6u68syGtAFt-IynUw27lGNqIGzrkdLKqmW26hqghnr1lXDJYhXoRJFOffk7KDy7s65EEQn8eTH1pbR3XVhioXCDADXqE3p1hyi_fMekEBn3m9qEu6sv_bIgQ9pQWUILJSlWm5ViecbW12xs6gxN");'>
-                        <button
-                            class="flex shrink-0 items-center justify-center rounded-full size-16 bg-black/40 text-white">
-                            <div class="text-inherit" data-icon="Play" data-size="24px" data-weight="fill">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
-                                    viewBox="0 0 256 256">
-                                    <path
-                                        d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65a16,16,0,0,1-16.2.3A15.86,15.86,0,0,1,64,216.13V39.87a15.86,15.86,0,0,1,8.12-13.82,16,16,0,0,1,16.2.3L232.4,114.49A15.74,15.74,0,0,1,240,128Z">
-                                    </path>
-                                </svg>
-                            </div>
-                        </button>
-                    </div>
-                </div>
-                <h2 class="text-[#101519] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
-                    Reflection</h2>
-                <p class="text-[#101519] text-base font-normal leading-normal pb-3 pt-1 px-4">
-                    Throughout the development of this project, we encountered various challenges, including
-                    [mention specific challenges]. Overcoming these challenges provided valuable
-                    insights into [mention key learnings]. The project has significantly enhanced our understanding
-                    of Java development best practices.
-                </p>
-                <h2 class="text-[#101519] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
-                    Source Code</h2>
-                <div class="flex px-4 py-3 justify-start">
-                    <button
-                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#d7e7f3] text-[#101519] text-sm font-bold leading-normal tracking-[0.015em]">
-                        <span class="truncate">View on GitHub</span>
-                    </button>
-                </div>
+                <br>
+                在時間與能力有限的情況下，這次專題開發仍有許多未盡完善之處。例如在購物車功能上，雖然已經使用 Redis 做快取，但資料一致性處理仍有更細緻的優化空間；在訂單管理部分，除了後端使用 DTO 與
+                @Pattern
+                進行資料驗證外，前端也設置了多層資料驗證並以 alert 提醒使用者。這讓我意識到如何避免前後端重工、簡化程式碼，是我未來需要深入研究的課題。
+                <br>
+                <br>
+                總結來說，雖然這次專題無法做到盡善盡美，但能將課程中所學實際應用於專案開發，對我而言已是莫大的收穫。未來我會持續努力學習，並期望能在日後的專案中持續成長與突破。
+              </p>
+              <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Source Code
+              </h2>
+              <div class="flex px-4 py-3 justify-start">
+                <a href="https://github.com/yenhsinfff/CJA101G2" target="_blank"
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#b2c7e5] text-[#14191f] text-sm font-bold leading-normal tracking-[0.015em]">
+                  <span class="truncate">View on GitHub</span>
+                </a>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-    </div>
+      </div>
 </body>
 
 </html>
