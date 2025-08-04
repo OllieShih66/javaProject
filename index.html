@@ -9,8 +9,11 @@
 
   <title>Java Project</title>
   <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 </head>
 
 <body>
@@ -277,68 +280,182 @@
               </div>
 
 
-              <!-- <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
-                Implementation
+              <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+                實作細節 Implementation
                 Details</h2>
-              <div class="flex items-center gap-4 bg-[#14191f] px-4 min-h-14">
-                <div class="text-white flex items-center justify-center rounded-lg bg-[#2b3440] shrink-0 size-10"
-                  data-icon="Stack" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
-                    viewBox="0 0 256 256">
-                    <path
-                      d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z">
-                    </path>
-                  </svg>
+
+              <div class="flex items-center gap-4 bg-[#14191f] px-4 py-3">
+                <div class="flex flex-col justify-center">
+                  <h2 class="text-[#9dabbe] text-base font-bold leading-tight line-clamp-1">Redis 購物車快取管理與合併邏輯</h2>
+                  <p style="color: #9dabbe; margin-top: 10px;">
+                    在設計購物車時將存放方式依據登入會員與否分為兩種，
+                    在未登入情況下會將資料存放在前端，一旦登入後就會先檢查資料庫是否有先前登入後存放到購物車的商品，並且將前後端的購物車進行合併，
+                    合併過程會使用商品編號、商品顏色、商品規格來去確認該商品是否先前已存入資料庫，若曾經存入就調整數量；若未存入過就新增一筆資料。
+                  </p>
                 </div>
-                <p class="text-white text-base font-normal leading-normal flex-1 truncate">Layered architecture
-                  separating
-                  UI, business logic, and data access.</p>
               </div>
-              <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-                <label class="flex flex-col min-w-40 flex-1">
-                  <textarea
-                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#3d4a5c] bg-[#1f252e] focus:border-[#3d4a5c] min-h-36 placeholder:text-[#9dabbe] p-[15px] text-base font-normal leading-normal"></textarea>
-                </label>
-              </div>
-              <div class="flex items-center gap-4 bg-[#14191f] px-4 min-h-14">
-                <div class="text-white flex items-center justify-center rounded-lg bg-[#2b3440] shrink-0 size-10"
-                  data-icon="PuzzlePiece" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
-                    viewBox="0 0 256 256">
-                    <path
-                      d="M220.27,158.54a8,8,0,0,0-7.7-.46,20,20,0,1,1,0-36.16A8,8,0,0,0,224,114.69V72a16,16,0,0,0-16-16H171.78a35.36,35.36,0,0,0,.22-4,36.11,36.11,0,0,0-11.36-26.24,36,36,0,0,0-60.55,23.62,36.56,36.56,0,0,0,.14,6.62H64A16,16,0,0,0,48,72v32.22a35.36,35.36,0,0,0-4-.22,36.12,36.12,0,0,0-26.24,11.36,35.7,35.7,0,0,0-9.69,27,36.08,36.08,0,0,0,33.31,33.6,35.68,35.68,0,0,0,6.62-.14V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V165.31A8,8,0,0,0,220.27,158.54ZM208,208H64V165.31a8,8,0,0,0-11.43-7.23,20,20,0,1,1,0-36.16A8,8,0,0,0,64,114.69V72h46.69a8,8,0,0,0,7.23-11.43,20,20,0,1,1,36.16,0A8,8,0,0,0,161.31,72H208v32.23a35.68,35.68,0,0,0-6.62-.14A36,36,0,0,0,204,176a35.36,35.36,0,0,0,4-.22Z">
-                    </path>
-                  </svg>
+
+              <pre class="bg-[#1f252e] text-[#cdd9e5] rounded-xl p-4 text-sm overflow-x-auto">
+                  <code >
+  // 取得已登入會員的購物車（Redis）
+  String redisKey = REDIS_KEY_PREFIX + memId; // Redis的key
+
+  // 產生商品唯一key（商品ID:顏色ID:規格ID）
+  String hashKey = guestItem.getProdId() + ":" + guestItem.getProdColorId() 
+      + ":" + guestItem.getProdSpecId();
+
+  // 取出購物車已存在的商品
+  Object value = redisTemplate.opsForHash().get(redisKey, hashKey);
+  CartVO existItem = null;
+  
+  if (existItem != null) {
+    existItem.setCartProdQty(existItem.getCartProdQty() + guestItem.getCartProdQty());
+    // 直接存 CartVO 物件
+    redisTemplate.opsForHash().put(redisKey, hashKey, existItem);
+  } else {
+    // 購物車沒有該商品，須新增一個存在購物車中
+    CartVO.CartKey cartKey = new CartVO.CartKey(memId, guestItem.getProdId(), 
+      guestItem.getProdColorId(), guestItem.getProdSpecId());
+    CartVO newVO = new CartVO();
+    newVO.setCartKey(cartKey);
+    newVO.setCartProdQty(guestItem.getCartProdQty());
+
+    // 直接存 CartVO 物件
+    redisTemplate.opsForHash().put(redisKey, hashKey, newVO);
+  }
+
+// 回傳合併後的購物車DTO清單給前端
+return getCart(memId);
+
+                  </code>
+                </pre>
+
+              <br><br>
+              <div class="flex items-center gap-4 bg-[#14191f] px-4 py-3">
+                <div class="flex flex-col justify-center">
+                  <h2 class="text-[#9dabbe] text-base font-bold leading-tight line-clamp-1">訂單金額與折扣運算邏輯</h2>
+                  <p style="color: #9dabbe; margin-top: 10px;">
+                    在新增訂單同時也要去新增訂單明細，以下程式碼為訂單新增訂單中新增明細的部分，
+                    在取得明細同時才可以從商品表格和商品規格表格取得商品真正的售價，並且計算出折價前總金額後再來看折價券折價部分。
+                    折價方式又分為兩種，一為總額減去折價金額，二為總額打折（百分比折扣），扣除折價金額並加上運費後才算是整筆訂單的實付金額。
+                  </p>
                 </div>
-                <p class="text-white text-base font-normal leading-normal flex-1 truncate">Key design patterns employed
-                  for
-                  code quality and maintainability.</p>
               </div>
-              <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-                <label class="flex flex-col min-w-40 flex-1">
-                  <textarea
-                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#3d4a5c] bg-[#1f252e] focus:border-[#3d4a5c] min-h-36 placeholder:text-[#9dabbe] p-[15px] text-base font-normal leading-normal"></textarea>
-                </label>
-              </div>
-              <div class="flex items-center gap-4 bg-[#14191f] px-4 min-h-14">
-                <div class="text-white flex items-center justify-center rounded-lg bg-[#2b3440] shrink-0 size-10"
-                  data-icon="TestTube" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
-                    viewBox="0 0 256 256">
-                    <path
-                      d="M237.66,86.34l-60-60a8,8,0,0,0-11.32,0L37.11,155.57a44.77,44.77,0,0,0,63.32,63.32L212.32,107l22.21-7.4a8,8,0,0,0,3.13-13.25ZM89.11,207.57a28.77,28.77,0,0,1-40.68-40.68l28.8-28.8c8.47-2.9,21.75-4,39.07,5,10.6,5.54,20.18,8,28.56,8.73ZM205.47,92.41a8,8,0,0,0-3.13,1.93l-39.57,39.57c-8.47,2.9-21.75,4-39.07-5-10.6-5.54-20.18-8-28.56-8.73L172,43.31,217.19,88.5Z">
-                    </path>
-                  </svg>
+
+              <pre class="bg-[#1f252e] text-[#cdd9e5] rounded-xl p-4 text-sm overflow-x-auto">
+                  <code >
+  // 於明細建立完成後取得折扣前總金額，先預設為BigDecimal 0，方便後續計算訂單金額
+  BigDecimal beforeDiscountAmount = BigDecimal.ZERO;
+  sovo.setBeforeDiscountAmount(beforeDiscountAmount.intValue());
+
+  // 將實付金額預設為 BigDecimal 0，方便後續計算訂單金額
+  BigDecimal afterDiscountAmount = BigDecimal.ZERO;
+  sovo.setAfterDiscountAmount(afterDiscountAmount.intValue());
+
+  for (ShopOrderItemsDetailsDTO_insert_req detailsDTO : dtoDetails) {
+
+      ShopOrderItemsDetailsVO soidVO = new ShopOrderItemsDetailsVO();
+
+      // 取得數量，先轉為BigDecimal方便後續計算
+      BigDecimal qty = new BigDecimal(detailsDTO.getShopOrderQty());
+      soidVO.setShopOrderQty(qty.intValue());
+
+      // 取得價格，先轉為BigDecimal方便計算
+      ProdSpecListVO.CompositeDetail2 key = new ProdSpecListVO.CompositeDetail2(detailsDTO.getProdId(),
+          detailsDTO.getProdSpecId());
+      ProdSpecListVO spec = pslr.findById(key).orElseThrow(() -> new RuntimeException("查無該種規格"));
+
+      // 商品折扣
+      ShopProdVO prod = spr.findById(detailsDTO.getProdId())
+          .orElseThrow(() -> new RuntimeException("查無該種商品"));
+      ;
+      BigDecimal prodDiscount = prod.getProdDiscount();
+
+      BigDecimal price = new BigDecimal(spec.getProdSpecPrice()).multiply(prodDiscount).setScale(0,
+          RoundingMode.HALF_UP);
+      ;
+
+      // 將價格存入訂單明細
+      soidVO.setProdOrderPrice(price.intValue());
+
+      // 依照明細計算折扣前金額
+      beforeDiscountAmount = beforeDiscountAmount.add(price.multiply(qty));
+
+    }
+
+  // 取得discountCodeType
+  if (sovo.getDiscountCodeId() != null) {
+    Byte type = sovo.getDiscountCodeId().getDiscountType();
+
+    // 取得discountValue
+    BigDecimal value = dcVO.getDiscountValue();
+
+    if (type == 0) {
+
+      sovo.setDiscountAmount(value.intValue()); // 將value轉換為Integer
+
+      // 計算折扣後金額
+      BigDecimal totalAmount = beforeDiscountAmount.subtract(value);
+
+      // 加入運費計算實付金額
+      afterDiscountAmount = totalAmount.add(shipFee);
+
+      // 將afterDiscountAmount存入商品訂單
+      sovo.setAfterDiscountAmount(afterDiscountAmount.intValue());
+    } else if (type == 1) {
+      // 折扣前金額*(discountValue(%))並四捨五入
+      BigDecimal discountAmount = beforeDiscountAmount.multiply(value).setScale(0, RoundingMode.HALF_UP);
+
+      // 計算折扣後金額，先以BigDecimal計算
+      BigDecimal totalAmount = beforeDiscountAmount.subtract(discountAmount);
+      
+
+      // 加入運費計算實付金額
+      afterDiscountAmount = totalAmount.add(shipFee);
+
+      sovo.setDiscountAmount(discountAmount.intValue()); // 存入折扣金額
+      sovo.setAfterDiscountAmount(afterDiscountAmount.intValue()); // 存入實付金額
+
+    }
+  }
+
+                  </code>
+                </pre>
+              <br><br>
+              <div class="flex items-center gap-4 bg-[#14191f] px-4 py-3">
+                <div class="flex flex-col justify-center">
+                  <h2 class="text-[#9dabbe] text-base font-bold leading-tight line-clamp-1">訂單狀態與異常流程控管</h2>
+                  <p style="color: #9dabbe; margin-top: 10px;">
+                    在訂單編輯的部分，提供管理員很大的彈性去做調整，但也希望能夠符合實務業務流程，所以依據訂單狀態、退貨申請狀態也設定許多編輯限制。
+                    如後台管理中，有限制說一旦進入到退貨申請流程時，訂單就不在允許狀態變更，其餘欄位如也會有對應的限制，
+                    如聯絡資訊、送貨地址也有限制在訂單未出貨的情況下才能進行編輯。
+                    因訂單狀態也會涉及到是否可以進行訂單明細中評分、評價編輯，所以在這裡也有設計只有在完成取貨的狀況下才能進行評分、評價編輯。
+                  </p>
                 </div>
-                <p class="text-white text-base font-normal leading-normal flex-1 truncate">Comprehensive unit and
-                  integration tests included.</p>
               </div>
-              <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-                <label class="flex flex-col min-w-40 flex-1">
-                  <textarea
-                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#3d4a5c] bg-[#1f252e] focus:border-[#3d4a5c] min-h-36 placeholder:text-[#9dabbe] p-[15px] text-base font-normal leading-normal"></textarea>
-                </label>
-              </div> -->
+
+              <pre class="bg-[#1f252e] text-[#cdd9e5] rounded-xl p-4 text-sm overflow-x-auto">
+                  <code >
+// 訂單狀態變更，判斷是否可執行
+if (dtoUpdate.getShopOrderStatus() != null
+    && !sovo.getShopOrderStatus().equals(dtoUpdate.getShopOrderStatus())) {
+    // 退貨申請流程開啟時，不允許直接變更狀態
+    if (sovo.getShopReturnApply() == 0 || sovo.getShopOrderStatus() != 5) {
+        sovo.setShopOrderStatus(dtoUpdate.getShopOrderStatus());
+    } else {
+        throw new IllegalArgumentException("商品訂單已進行退貨申請流程");
+    }
+}
+
+// 只有「已取貨」且未申請退貨的訂單才能新增/修改商品評論
+final int ORDER_STATUS_COMPLETED = 3, NO_RETURN_APPLY = 0;
+if (order.getShopOrderStatus() != ORDER_STATUS_COMPLETED && order.getShopReturnApply() == NO_RETURN_APPLY) {
+    throw new RuntimeException("訂單未完成，無法評論或修改評價");
+}
+
+                  </code>
+                </pre>
+
               <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">心得與收穫
                 Reflection
               </h2>
@@ -366,6 +483,9 @@
           </div>
         </div>
       </div>
+
+
+
 </body>
 
 </html>
