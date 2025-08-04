@@ -46,6 +46,8 @@ lutu/
 ├── model/ (entity/DTO)
 ├── config/
 └── application.properties
+```
+
 * 使用標準三層架構（Controller-Service-Repository）
 * 採用 DTO 模式隔離 Entity 與外部傳輸資料
 * 整合 Redis 作為購物車暫存與快取優化
